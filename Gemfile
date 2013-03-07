@@ -2,6 +2,8 @@ source 'https://rubygems.org'
 
 gem 'rails', '3.2.12'
 gem 'bootstrap-sass', '2.1'
+gem 'bcrypt-ruby', '3.0.1'
+
 group :development, :test do
   gem 'rspec-rails', '2.11.0'
   gem 'guard-rspec', '1.2.1'
@@ -9,7 +11,9 @@ gem 'rb-inotify', '~> 0.9'
 gem 'guard-spork', '1.2.0'
   gem 'spork', '0.9.2'
 end
-
+group :development do
+  gem 'annotate', '2.5.0'
+end
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do

@@ -13,10 +13,15 @@ describe "Help page" do
     page.should have_content "help"
 end
 end
+
 describe "About Us page" do
-it {should have_selector('h1',:text => (full_title"About Us"))}
+before {visit about_us_path}
+it {should have_selector('h1',:text => "About Us")}
+it {should have_selector('title',:text => full_title("About Us"))}
 end
+
 describe "Contact page" do
+before {visit contact_path}
 it {should have_selector('title',
                     :text => full_title('Contact'))}
   end
