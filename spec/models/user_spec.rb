@@ -12,7 +12,7 @@
 require 'spec_helper'
 
 describe User do
-  before {@user = User.new(:name=>"haha", :email=>"haha@byebye.com", :password=>"foo",:password_confirmation=>"foo")}
+  before {@user = FactoryGirl.create(:user)}
   subject {@user}
   it { should respond_to(:name) }
   it { should respond_to(:email) }
